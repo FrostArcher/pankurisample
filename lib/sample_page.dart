@@ -36,7 +36,8 @@ class _SamplePageState extends State<SamplePage> {
           read: false,
           messageCount: 24),
       MessageModel(
-          imageUrl: "https://images.unsplash.com/photo-1573007974656-b958089e9f7b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+          imageUrl:
+              "https://images.unsplash.com/photo-1573007974656-b958089e9f7b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
           title: "Regan Raj",
           message: "Hi there I want to know more about beauty tips",
           time: "7:20 a.m.",
@@ -99,7 +100,7 @@ class _SamplePageState extends State<SamplePage> {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Icon(
-                        CupertinoIcons.calendar,
+                        Icons.event,
                         color: Colors.blueGrey,
                       ),
                       CircleAvatar(backgroundColor: Colors.red, radius: 5),

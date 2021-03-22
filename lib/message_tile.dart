@@ -17,19 +17,23 @@ class MessageTile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          CircleAvatar(
-            radius: 20,
-            child: messageModel.imageUrl.isNotEmpty
-                ? SizedBox.shrink()
-                : Icon(
+          messageModel.imageUrl.isNotEmpty
+              ? CircleAvatar(
+                  radius: 20,
+                  child: SizedBox.shrink(),
+                  backgroundImage: NetworkImage(
+                    messageModel.imageUrl ?? "",
+                  ),
+                  backgroundColor: Theme.of(context).accentColor,
+                )
+              : CircleAvatar(
+                  radius: 20,
+                  backgroundColor: Theme.of(context).accentColor,
+                  child: Icon(
                     CupertinoIcons.question_circle_fill,
                     color: Theme.of(context).primaryColor,
                   ),
-            backgroundImage: NetworkImage(
-              messageModel.imageUrl ?? "",
-            ),
-            backgroundColor: Theme.of(context).accentColor,
-          ),
+                ),
           SizedBox(
             width: 10,
           ),
